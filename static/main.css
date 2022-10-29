@@ -1,0 +1,33 @@
+body{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.titulo{
+    /* Vi que tambien podia cambiar el color a gradiente y un tamaño personalizado */
+    font-family: 'Montagu Slab', serif;
+    font-size:300%;
+    color:#FFFFFF;
+}
+
+.texto{
+    /* Aqui voy a poner el codigo del estilo que le quiero aplicar al texto */
+    font-family: 'Montagu Slab', serif;
+    color:#FFFFFF;
+}
+.fecha_tarea{
+    width:15%;
+}
+
+.categoria_tarea{
+    width:35%;
+}
+
+.contenido_tarea{
+    width:35%;
+}
+.tarea-hecha{
+    text-decoration: line-through;
+    color: #cfcfcf;
+ }

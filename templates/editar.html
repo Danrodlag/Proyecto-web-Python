@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organizador de Tareas</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sketchy/bootstrap.min.css" integrity="sha384-RxqHG2ilm4r6aFRpGmBbGTjsqwfqHOKy1ArsMhHusnRO47jcGqpIQqlQK/kmGy9R" crossorigin="anonymous">
+
+    <!-- Hoja de estilo propia (main.css) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+</head>
+<body>
+    <main class="container p-4">
+        <h1 class="display-4 text-center  mt-4 titulo" >ORGANIZADOR DE TAREAS</h1>
+        <hr> <!-- Añade la linea separadora -->
+        <br> <!-- Una especie de enter para dar espacio -->
+        <br>
+
+        <form action="/guardar-edicion/{{ editado.id }}" method="post">
+            <div class="contenido_tarea">
+                <label for="contenido_tarea" class="form-label texto">Tarea</label>
+                <input type="text" class="form-control" id="contenido_tarea" placeholder="{{ editado.contenido }}" name="contenido_tarea" autofocus>
+            </div>
+            <div class="categoria_tarea">
+                <label for="categoria_tarea" class="form-label texto">Categoria</label>
+                <input type="text" class="form-control" id="categoria_tarea" placeholder="{{ editado.categoria }}" name="categoria_tarea" autofocus>
+            </div>
+            <div class="fecha_tarea">
+                <label for="fecha_tarea" class="form-label texto">Fecha limite</label>
+                <input type="date" class="form-control" id="fecha_tarea" placeholder="{{ editado.fecha }}" name="fecha_tarea" autofocus>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-outline-light">
+                Guardar
+            </button>
+
+        </form>
+
+    </main>
+</body>
+</html>
